@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity=
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <script src="script.js"></script>
+
+    <title>To Do </title>
+    <style>
+        body {
+            background-color: #e4ddddd8;            
+        }
+        .wrinkled-glass-effect {
+            background: url('g1.webp') no-repeat center center; 
+            background-size: cover;
+            backdrop-filter: blur(5px); 
+            -webkit-backdrop-filter: blur(5px); 
+            border: 1px solid rgba(255, 255, 255, 0.18); 
+            color: black; 
+        }        
+    </style>
+</head>
+
+<body>
+    <header class="wrinkled-glass-effect text-white p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <font face="Balsamiq Sans"
+                        size="6" color="black">
+                        <strong>ToDo 
+                            <span class="material-symbols-outlined">
+                                bookmark_manager
+                            </span>
+                        </strong>
+                    </font>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-3">
+        <h2>Add Items</h2>
+
+        <label id="lblsuccess" class="text-success"
+                style="display: none;">
+        </label>
+        
+        <form id="addForm">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-7">
+
+                    <input type="text" onkeyup=
+                        "toggleButton(this, 'submit')"
+                        class="form-control" id="item">
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                <input type="submit" class="btn btn-dark"
+                        id="submit" value="Submit" disabled>
+                </div>
+            </div>
+        </form>
+
+        <h3 class="mt-4">Tasks</h3>
+
+        <form id="addForm">
+            <ul class="list-group" id="items"></ul>
+        </form>
+    </div>
+</body>
+
+</html>
